@@ -8,7 +8,7 @@ Browsing the internet may seem like a simple task but under the hood it is actua
 Having a basic understading of how the internet operates under the hood is fundamental for working in the
 software industry.
 
-![The Internet](assets/internet.jpg)
+![The Internet](/assets/internet.jpg)
 
 At a 10,000 foot view, the internet is nothing more than a group of computers spread across the world.
 These computers are able to send and recieve messages, often refered to as packets, from each other.
