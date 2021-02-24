@@ -15,3 +15,5 @@ These computers are able to send and recieve messages, often refered to as packe
 Similar to the postal service, each computer is given an address where packets can be sent. These addresses
 are called <em>Internet Protocol (IP)</em> addresses and are represented by four numbers separated by a period.
 For example **127.0.0.1**.
+
+# Clients and Servers
