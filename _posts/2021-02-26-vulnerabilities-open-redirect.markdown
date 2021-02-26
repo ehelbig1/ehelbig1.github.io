@@ -10,6 +10,12 @@ Redirection is a normal behavior of websites. The application directs the browse
 
 Open redircect vulnerabilites occur when the destination the browser is being redirected to can be manipulated by the user.
 
+# How to Find Open Redirect Vulnerabilities
+
+When looking for Open Redirect vulnerabilites in an application you will keep an eye out for any requests that include a parameter that specifies a redirect URL. Sometimes this will be obvious by naming conventions such as a parameter name <em>redirect_url</em> or something similar. Othertimes, these parameters may be obfuscated and could be single characters. Take note of the responses that you recieve from the server for any indication that you are being redirected and explore if that URL is vulnerable.
+
+As we'll see later, there are several different ways that redirects are handled and as such, there are several areas to explore when searching for Open Redirect vulnerabilities.
+
 # Parameter Based Attacks
 
 As stated earlier, one type of open redirect vulnerability is when a redirect URL is passed as a URL parameter. An attacker is able to modify the value of this parameter and if the server doesn't validate the value then a user could be redirected to a malicious site.
@@ -59,3 +65,21 @@ window.location.replace("https://www.google.com/")
 ```
 
 This type of vulnerability can be exploited when an attacker is able to execute Javascript. The can be a Cross-site Scripting attack or simply a website that allows a user to define a URL to redirect to.
+
+# Remediation
+
+To prevent Open Redirect vulnerabilities, it's best to not allow a user to define a redirect URL. Two ways this can be done are: 
+- Have the application can provide direct links for the user to click on. 
+- Store a list of possible URL to redirect to and pass an index into that list with the request.
+
+Both these solutions prevent a user from defining an arbitrary redirect URL but sometimes it may not be feasible to completely remove this functionalty from an application however.
+
+In these cases, one of the following methods should be used:
+- Use relative URLs and validate that the URL exists.
+- Use URLs relative the web root and validate that the request value starts with a **/**.
+- Use absolute URLs and verify that the URL begins with a valid domain.
+
+# References
+
+[PortSwigger](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
+[Real-World Bug Hunting: A Field Guide to Web Hacking](https://www.amazon.com/Real-World-Bug-Hunting-Field-Hacking/dp/1593278616)
