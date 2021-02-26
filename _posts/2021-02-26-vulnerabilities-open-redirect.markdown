@@ -41,3 +41,19 @@ Here's an example of an HTML document with such a meta tag:
 ```
 
 The <em>content</em> attribute in the above meta tag defines how long the browser should wait before making a request to the defined URL (0 meaning 0 seconds in this case).
+
+This vulnerability can be exploited when an attacker as control over the content attribute in the meta tag or the ability to inject their own meta tag via another vulnerability.
+
+# Javascript Based Attack
+
+An attacker may also be able to control redirect functionality by changing the window's <em>location</em> property through the DOM. The <em>Document Object Model (DOM)</em> is an API that allows the structure, style, or content of a webpage to modified. The <em>location</em> property defines where a request should be sent and a browser will immediately interpret this javascript and redirect to the value of the property.
+
+Any of the following javascript statements can be run to change the location property on the window:
+
+```javascript
+window.location = "https://www.google.com/"
+window.location.href = "https://www.google.com/"
+window.location.replace("https://www.google.com/")
+```
+
+This type of vulnerability can be exploited when an attacker is able to execute Javascript. The can be a Cross-site Scripting attack or simply a website that allows a user to define a URL to redirect to.
