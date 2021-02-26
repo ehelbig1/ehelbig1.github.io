@@ -12,6 +12,8 @@ Open redircect vulnerabilites occur when the destination the browser is being re
 
 # Parameter Based Attacks
 
+As stated earlier, one type of open redirect vulnerability is when a redirect URL is passed as a URL parameter. An attacker is able to modify the value of this parameter and if the server doesn't validate the value then a user could be redirected to a malicious site.
+
 As an example, suppose google had a URL such as:
 
 https://www.google.com/?redirect_to=https://www.gmail.com
