@@ -81,5 +81,5 @@ In these cases, one of the following methods should be used:
 
 # References
 
-[PortSwigger](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
-[Real-World Bug Hunting: A Field Guide to Web Hacking](https://www.amazon.com/Real-World-Bug-Hunting-Field-Hacking/dp/1593278616)
+- [PortSwigger](https://portswigger.net/kb/issues/00500100_open-redirection-reflected)
+- [Real-World Bug Hunting: A Field Guide to Web Hacking](https://www.amazon.com/Real-World-Bug-Hunting-Field-Hacking/dp/1593278616)
