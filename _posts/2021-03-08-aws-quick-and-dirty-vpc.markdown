@@ -17,7 +17,7 @@ Creates an Elastic IP Address
 1. Navigate to the VPC service in the AWS management console.
 2. Navigate to <em>Elastic IPs</em> in the left menu.
 
-![Elastic IPs Screen](/assets/aws-quick-and-dirty-vpc-image-elastic-ips-screen.png)
+  ![Elastic IPs Screen](/assets/aws-quick-and-dirty-vpc-image-elastic-ips-screen.png)
 
 3. Click <em>Allocate Elastic IP address</em>.
 4. Leave the default configuration and click <em>Allocate</em>
@@ -28,13 +28,13 @@ Creates a VPC, a public and private Subnet, a public and private Route Table, a 
 ## Instructions
 1. Navigate to the <em>VPC Dashboard</em> in the left menu within the VPC service.
 
-![VPC Dashboard](/assets/aws-quick-and-dirty-vpc-image-vpc-dashboard.png)
+  ![VPC Dashboard](/assets/aws-quick-and-dirty-vpc-image-vpc-dashboard.png)
 
 2. Within the VPC Dashboard click Launch VPC Wizard.
 3. Select the <em>VPC with Public and Private Subnets</em> option.
 4. Click <em>Select</em>
 
-![Select a VPC Configuration](/assets/aws-quick-and-dirty-vpc-image-select-vpc-configuration.png)
+  ![Select a VPC Configuration](/assets/aws-quick-and-dirty-vpc-image-select-vpc-configuration.png)
 
 5. Optionally, add a unique, friendly, name for this VPC.
 6. Click the input box next to <em>Elastic IP Allocation ID</em> and select the Elastic IP that was created in earlier steps.
@@ -45,7 +45,7 @@ Creates an additional public and private Subnet in the VPC.
 
 1. Navigate to <em>Subnets</em> in the left menu within the VPC service.
 
-![subnets screen](/assets/aws-quick-and-dirty-vpc-image-subnets-screen.png)
+  ![subnets screen](/assets/aws-quick-and-dirty-vpc-image-subnets-screen.png)
 
 2. Click <em>Create subnet<em>.
 3. In the <em>VPC ID</em> drop down, select the VPC created earlier.
@@ -53,7 +53,7 @@ Creates an additional public and private Subnet in the VPC.
 5. For <em>Availability Zone</em> select an AZ that different from the other private and public Subnets in this VPC.
    - This information can be found by navigating to VPC Subnets screen and viewing the Subnets details.
 
-![Subnet availability zone](/assets/aws-quick-and-dirty-vpc-image-subnet-details.png)
+  ![Subnet availability zone](/assets/aws-quick-and-dirty-vpc-image-subnet-details.png)
 
 6. In <em>IPv4 CIDR block</em> choose a CIDR block that's different than the other Subnets but within the same VPC.
   - Since we kept the default values when creating the VPC
@@ -83,6 +83,6 @@ Changing the newly created public Subnets Route Table:
   - The <em>Edit route table association</em> page also shows the Routes of a given Route Table.
     - Again, the public Route Table is the one with a route targeting the Internet Gateway.
 
-![route table association](/assets/aws-quick-and-dirty-vpc-image-route-table-association.png)
+  ![route table association](/assets/aws-quick-and-dirty-vpc-image-route-table-association.png)
 
 5. Click <em>Save</em>.
