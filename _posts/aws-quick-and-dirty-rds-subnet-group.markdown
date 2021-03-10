@@ -14,7 +14,7 @@ When Amazon RDS creates a RDS Instance, it assigns a network interface to the In
 Creates a RDS Subnet Group
 
 ## Prerequisites
-[VPC](2021-03-08-aws-quick-and-dirty-vpc.markdown)
+[VPC](aws-quick-and-dirty-vpc.markdown)
 
 ## Instructions
 1. Navigate to the RDS service in the AWS Management Console.
