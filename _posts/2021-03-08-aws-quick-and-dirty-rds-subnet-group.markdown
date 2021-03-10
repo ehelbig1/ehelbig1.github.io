@@ -20,7 +20,7 @@ Creates a RDS Subnet Group
 1. Navigate to the RDS service in the AWS Management Console.
 2. Navigate to <em>Subnet groups</em> in the left menu.
 
-![Subnet groups screen](../assets/aws-introductions-to-rds-image-subnet-groups-screen.png)
+![Subnet groups screen](/assets/aws-introductions-to-rds-image-subnet-groups-screen.png)
 
 3. Click <em>Create DB Subnet Group</em>.
 4. Give the subnet group a friendly name and description.
