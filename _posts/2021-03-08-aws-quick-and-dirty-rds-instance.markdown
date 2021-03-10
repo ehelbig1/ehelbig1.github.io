@@ -10,13 +10,13 @@ A RDS Instance runs a database engine, determining the type of database used (Po
 
 The computation and memory capacity are determined by the Instance class and can be selected based on requirements (the Instance class can be changed if requirements change).
 
-A RDS Instance runs on a [VPC](aws-quick-and-dirty-vpc.markdown).
+A RDS Instance runs on a [VPC](2021-03-08-aws-quick-and-dirty-vpc.markdown).
 
 # Create RDS Instance
 Creates a RDS Instance.
 
 ## Prerequisites
-[RDS Subnet Group](aws-quick-and-dirty-rds-subnet-group.markdown)
+[RDS Subnet Group](2021-03-08-aws-quick-and-dirty-rds-subnet-group.markdown)
 
 ## Instructions
 1. Navigate to the RDS service in the AWS Management Console.
