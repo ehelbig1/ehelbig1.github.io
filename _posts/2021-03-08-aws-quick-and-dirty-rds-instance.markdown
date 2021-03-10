@@ -34,7 +34,7 @@ Creates a RDS Instance.
 8. Optionally, the <em>Master username</em> can be changed from it's default value.
 9. Leave <em>Auto generate a password</em> unchecked.
 10. Enter a <em>Master password</em> and <em>Confirm password</em>.
-10. Click <em>Create database</em>.
+11. Click <em>Create database</em>.
 
 # Disclaimer
 This blog is a guide to quickly setup an RDS Instance in AWS and is not intended to be used for production applications. By default, data is not encrypted, deletion protection is not enabled, and the default VPC Security Group is used.
