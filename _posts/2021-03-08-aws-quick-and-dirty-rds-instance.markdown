@@ -23,7 +23,7 @@ Creates a RDS Instance.
 2. Navigate to <em>Databases</em> in the left menu.
 3. Click <em>Create database</em>
 
-![Databases screen](/assets/aws-quick-and-dirty-rds-instance-image-databases-screen.png)
+   ![Databases screen](/assets/aws-quick-and-dirty-rds-instance-image-databases-screen.png)
 
 4. For <em>Choose a database creation method</em> choose <em>Easy create</em>
    - This option uses recommended best-practice configurations.
