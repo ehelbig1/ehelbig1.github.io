@@ -90,7 +90,8 @@ Aurora
   - Amazon took the open source databases and swapped the storage and logging layers to be more cloud native
 - Natively built for AWS
 
-<ul>
+# Relevant Articles
+<ul style="list-style-type: none;">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">
