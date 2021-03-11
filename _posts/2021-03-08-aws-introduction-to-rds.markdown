@@ -2,7 +2,7 @@
 layout: post
 title:  "AWS - An Introduction to RDS"
 date:   2021-03-08 20:17:24 -0500
-categories: aws cloud
+categories: aws rds
 ---
 RDS - Relational Database Service
 

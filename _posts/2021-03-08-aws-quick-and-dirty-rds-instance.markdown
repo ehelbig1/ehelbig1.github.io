@@ -2,7 +2,7 @@
 layout: post
 title:  "AWS - Quick and Dirty RDS Instance"
 date:   2021-03-08 20:17:24 -0500
-categories: aws cloud
+categories: aws rds
 ---
 A RDS Instance is the basic building block of RDS. It is an isolated database environment in the AWS Cloud. It can contain multiple user-created databases. 
 

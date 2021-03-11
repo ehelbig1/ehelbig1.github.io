@@ -2,7 +2,7 @@
 layout: post
 title:  "AWS - Quick and Dirty VPC Setup"
 date:   2021-03-08 20:17:24 -0500
-categories: aws cloud
+categories: aws vpc
 ---
 <em>Virtual Private Cloud (VPC)</em> is a service that allows the launch of AWS resources in a logically isolated virtual network you define. This gives you complete control over your virtual network environment, including selecting your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use IPv4 and IPv6 for most resources in your VPC, helping ensure secure and easy access to resources and applications.
 

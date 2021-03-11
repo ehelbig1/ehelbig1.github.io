@@ -2,7 +2,7 @@
 layout: post
 title:  "AWS - Quick and Dirty RDS Subnet Group"
 date:   2021-03-08 20:17:24 -0500
-categories: aws cloud
+categories: aws rds
 ---
 A RDS Database Subnet Group is a collection of subnets (typically private) that are designated for a RDS Instance. RDS Subnet Groups specify a particular VPC a RDS Instance is created in.
 

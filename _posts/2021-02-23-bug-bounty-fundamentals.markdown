@@ -2,7 +2,7 @@
 layout: post
 title:  "What the Heck are Bug Bounties?"
 date:   2021-02-23 20:17:24 -0500
-categories: fundamentals internet
+categories: fundamentals bugbounties
 ---
 A <em>bug bounty</em> is an award, often monetary, that a company offers to anyone that discovers
 and reports a vulnerability in a piece of software.
