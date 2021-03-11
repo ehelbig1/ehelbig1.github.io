@@ -5,6 +5,12 @@ date:   2021-03-08 20:17:24 -0500
 category: aws
 tag: rds
 ---
+
+&nbsp;
+&nbsp;
+
+***
+
 RDS - Relational Database Service
 
 A managed Relational Database Service in AWS
@@ -24,6 +30,11 @@ A managed Relational Database Service in AWS
   - High Availability (99.95% availability)
   - Cross region replication
 
+&nbsp;
+&nbsp;
+
+***
+
 # Provisioning an RDS Instance
 
 Configuration Options:
@@ -40,6 +51,11 @@ Configuration Options:
 - Maintenance Window
 
 The above options will need to be considered based on business needs but you do not nee to worry about the underlying servers. There is no shell access available to the server. Access to some system procedures and tables that require advanced privileges are restricted.
+
+&nbsp;
+&nbsp;
+
+***
 
 # Terminology
 Database Instance
