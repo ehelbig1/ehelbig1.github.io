@@ -2,19 +2,38 @@
 layout: post
 title:  "Open Redirect Vulnerabilities"
 date:   2021-02-26 20:17:24 -0500
-categories: vulnerabilities web
+category: security
+tag: vulnerabilities
 ---
+
+&nbsp;
+&nbsp;
+
+***
+
+# Summary 
+
 Open redirects occur when a developer mistrusts attacker-controlled input to redirect to another site. This input usually takes the form of a URL parameter, HTML meta refresh tags, or the Document Object Model (DOM) location property.
 
 Redirection is a normal behavior of websites. The application directs the browser to send a request to a different URL. Severs will generally return a status code of 302, meaning the site was found but has temporarily been moved. Its also common to see responses of 301, 303, 307, or 308.
 
 Open redirect vulnerabilities occur when the destination the browser is being redirected to can be manipulated by the user.
 
+&nbsp;
+&nbsp;
+
+***
+
 # How to Find Open Redirect Vulnerabilities
 
 When looking for Open Redirect vulnerabilities in an application you will keep an eye out for any requests that include a parameter that specifies a redirect URL. Sometimes this will be obvious by naming conventions such as a parameter name <em>redirect_url</em> or something similar. Other times, these parameters may be obfuscated and could be single characters. Take note of the responses that you receive from the server for any indication that you are being redirected and explore if that URL is vulnerable.
 
 As we'll see later, there are several different ways that redirects are handled and as such, there are several areas to explore when searching for Open Redirect vulnerabilities.
+
+&nbsp;
+&nbsp;
+
+***
 
 # Parameter Based Attacks
 
@@ -31,6 +50,11 @@ However, suppose an attacker wanted to redirect the browser to a malicious websi
 https://www.google.com/?redirect_to=https://www.malicious-site.com
 
 This request would cause the server to respond with a response directing the browser to navigate to this malicious site and may do so without the users knowledge.
+
+&nbsp;
+&nbsp;
+
+***
 
 # HTML Meta Tag Based Attack
 
@@ -52,6 +76,11 @@ The <em>content</em> attribute in the above meta tag defines how long the browse
 
 This vulnerability can be exploited when an attacker as control over the content attribute in the meta tag or the ability to inject their own meta tag via another vulnerability.
 
+&nbsp;
+&nbsp;
+
+***
+
 # Javascript Based Attack
 
 An attacker may also be able to control redirect functionality by changing the window's <em>location</em> property through the DOM. The <em>Document Object Model (DOM)</em> is an API that allows the structure, style, or content of a webpage to modified. The <em>location</em> property defines where a request should be sent and a browser will immediately interpret this javascript and redirect to the value of the property.
@@ -66,6 +95,11 @@ window.location.replace("https://www.google.com/")
 
 This type of vulnerability can be exploited when an attacker is able to execute Javascript. The can be a Cross-site Scripting attack or simply a website that allows a user to define a URL to redirect to.
 
+&nbsp;
+&nbsp;
+
+***
+
 # Remediation
 
 To prevent Open Redirect vulnerabilities, it's best to not allow a user to define a redirect URL. Two ways this can be done are: 
@@ -78,6 +112,29 @@ In these cases, one of the following methods should be used:
 - Use relative URLs and validate that the URL exists.
 - Use URLs relative the web root and validate that the request value starts with a **/**.
 - Use absolute URLs and verify that the URL begins with a valid domain.
+
+&nbsp;
+&nbsp;
+
+***
+
+# Relevant Articles
+<ul style="list-style-type: none;">
+  {% for post in site.posts %}
+    {% if post.category == page.category and post.tag == page.tag and post.title != page.title %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+&nbsp;
+&nbsp;
+
+***
 
 # References
 

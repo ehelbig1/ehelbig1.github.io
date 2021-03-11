@@ -2,13 +2,27 @@
 layout: post
 title:  "AWS - Quick and Dirty VPC Setup"
 date:   2021-03-08 20:17:24 -0500
-categories: aws vpc
+category: aws
+tag: vpc
 ---
+
+&nbsp;
+&nbsp;
+
+***
+
+# Summary 
+
 <em>Virtual Private Cloud (VPC)</em> is a service that allows the launch of AWS resources in a logically isolated virtual network you define. This gives you complete control over your virtual network environment, including selecting your own IP address range, creation of subnets, and configuration of route tables and network gateways. You can use IPv4 and IPv6 for most resources in your VPC, helping ensure secure and easy access to resources and applications.
 
 VPCs makes it easy to customize your network configuration. Create public-facing subnets for web servers and private subnets for backend systems, such as databases or application servers. VPCs provide multiple layers of security, including security groups and <em>network access control lists (nacl)</em> to protect resources in each subnet.
 
 The VPC Launch Wizard in the AWS Management console can be used to assist us in setting up a new VPC quickly.
+
+&nbsp;
+&nbsp;
+
+***
 
 # Create an Elastic IP Address
 Creates an Elastic IP Address
@@ -21,6 +35,11 @@ Creates an Elastic IP Address
 
 3. Click <em>Allocate Elastic IP address</em>.
 4. Leave the default configuration and click <em>Allocate</em>
+
+&nbsp;
+&nbsp;
+
+***
 
 # Create a VPC
 Creates a VPC, a public and private Subnet, a public and private Route Table, a default VPC Security Group, and a <em>Network Access Control List (NACL)</em>.
@@ -39,6 +58,11 @@ Creates a VPC, a public and private Subnet, a public and private Route Table, a 
 5. Optionally, add a unique, friendly, name for this VPC.
 6. Click the input box next to <em>Elastic IP Allocation ID</em> and select the Elastic IP that was created in earlier steps.
 7. Leave all other values as defaults and click <em>Create VPC</em>.
+
+&nbsp;
+&nbsp;
+
+***
 
 # Adding Additional Subnets
 Creates an additional public and private Subnet in the VPC.
@@ -86,3 +110,21 @@ Changing the newly created public Subnets Route Table:
    ![route table association](/assets/aws-quick-and-dirty-vpc-image-route-table-association.png)
 
 5. Click <em>Save</em>.
+6. 
+&nbsp;
+&nbsp;
+
+***
+
+# Relevant Articles
+<ul style="list-style-type: none;">
+  {% for post in site.posts %}
+    {% if post.category == page.category and post.tag == page.tag and post.title != page.title %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

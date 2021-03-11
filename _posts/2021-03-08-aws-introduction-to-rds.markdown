@@ -11,6 +11,8 @@ tag: rds
 
 ***
 
+# Summary
+
 RDS - Relational Database Service
 
 A managed Relational Database Service in AWS
@@ -115,7 +117,7 @@ Aurora
 # Relevant Articles
 <ul style="list-style-type: none;">
   {% for post in site.posts %}
-    {% if post.category == "aws" and post.tag == "rds" and post.title != page.title %}
+    {% if post.category == page.category and post.tag == page.tag and post.title != page.title %}
       <li>
         <a href="{{ post.url }}">
           {{ post.title }}

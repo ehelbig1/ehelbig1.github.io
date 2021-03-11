@@ -2,13 +2,27 @@
 layout: post
 title:  "AWS - Quick and Dirty RDS Subnet Group"
 date:   2021-03-08 20:17:24 -0500
-categories: aws rds
+category: aws 
+tag: rds
 ---
+
+&nbsp;
+&nbsp;
+
+***
+
+# Summary 
+
 A RDS Database Subnet Group is a collection of subnets (typically private) that are designated for a RDS Instance. RDS Subnet Groups specify a particular VPC a RDS Instance is created in.
 
 Each RDS Subnet Group should have subnets in at least two Availability Zones (AZ). Amazon chooses a subnet and an IP address within that subnet from the RDS Subnet Group  to associate with the RDS Instance. If the primary database of a Multi-AZ deployment fails, Amazon can promote the secondary database to primary and create a new secondary database in another AZ, specified by the RDS Subnet Group.
 
 When Amazon RDS creates a RDS Instance, it assigns a network interface to the Instance by using an IP address from the RDS Subnet Group. It is recommended to use the DNS name to connect to the RDS Instance as the underlying IP address can change.
+
+&nbsp;
+&nbsp;
+
+***
 
 # Create RDS Subnet Groups
 Creates a RDS Subnet Group
@@ -34,3 +48,21 @@ Creates a RDS Subnet Group
    - Navigate to the Subnets in the VPC service to determine the Subnet ID of the Private Subnet.
    - You can duplicate the current tab to navigate to other services without losing information.
 8. Click <em>Create</em>
+
+&nbsp;
+&nbsp;
+
+***
+
+# Relevant Articles
+<ul style="list-style-type: none;">
+  {% for post in site.posts %}
+    {% if post.category == page.category and post.tag == page.tag and post.title != page.title %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
