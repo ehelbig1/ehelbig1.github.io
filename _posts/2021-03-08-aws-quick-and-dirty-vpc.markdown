@@ -110,7 +110,7 @@ Changing the newly created public Subnets Route Table:
    ![route table association](/assets/aws-quick-and-dirty-vpc-image-route-table-association.png)
 
 5. Click <em>Save</em>.
-6. 
+ 
 &nbsp;
 &nbsp;
 
