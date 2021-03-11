@@ -2,7 +2,8 @@
 layout: post
 title:  "AWS - An Introduction to RDS"
 date:   2021-03-08 20:17:24 -0500
-categories: aws rds
+category: aws
+tag: rds
 ---
 RDS - Relational Database Service
 
@@ -96,11 +97,12 @@ Aurora
 # Relevant Articles
 <ul style="list-style-type: none;">
   {% for post in site.posts %}
-    <p>{{ post.categories }}</p>
-    <li>
-      <a href="{{ post.url }}">
-        {{ post.title }}
-      </a>
-    </li>
+    {% if post.category == "aws" and post.tag == "rds" %}
+      <li>
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
