@@ -89,3 +89,11 @@ Aurora
 - MySQL and PostgreSQL compatible relational database
   - Amazon took the open source databases and swapped the storage and logging layers to be more cloud native
 - Natively built for AWS
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.uri }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
