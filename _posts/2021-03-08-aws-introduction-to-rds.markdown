@@ -91,7 +91,8 @@ Aurora
   - Amazon took the open source databases and swapped the storage and logging layers to be more cloud native
 - Natively built for AWS
 
-
+&nbsp;
+&nbsp;
 ***
 
 # Relevant Articles
