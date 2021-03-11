@@ -97,7 +97,7 @@ Aurora
 # Relevant Articles
 <ul style="list-style-type: none;">
   {% for post in site.posts %}
-    {% if post.category == "aws" and post.tag == "rds" %}
+    {% if post.category == "aws" and post.tag == "rds" and post.title != page.title %}
       <li>
         <a href="{{ post.url }}">
           {{ post.title }}
