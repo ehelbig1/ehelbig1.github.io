@@ -89,6 +89,7 @@ Aurora
 - MySQL and PostgreSQL compatible relational database
   - Amazon took the open source databases and swapped the storage and logging layers to be more cloud native
 - Natively built for AWS
+
 ***
 
 # Relevant Articles
