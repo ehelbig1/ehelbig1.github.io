@@ -32,7 +32,7 @@ Image - an immutable snapshot of a docker virtual machine at a specific point in
 
 ***
 
-# Prerquisites
+# Prerequisites
 AWS ECR\
 AWS CLI\
 Dockerfile
