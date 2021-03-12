@@ -1,6 +1,6 @@
 {% assign category = include.category %}
 {% assign tag = include.tag %}
-{% title = include.title %}
+{% assign title = include.title %}
 
 # Relevant Articles
 <ul style="list-style-type: none;">

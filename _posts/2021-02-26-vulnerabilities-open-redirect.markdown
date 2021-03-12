@@ -118,7 +118,7 @@ In these cases, one of the following methods should be used:
 
 ***
 
-{% include relevant_articles.md title=page.title category=page.category tag=page.tag %}
+{% include relevant_articles.markdown title=page.title category=page.category tag=page.tag %}
 
 &nbsp;
 &nbsp;

@@ -54,4 +54,4 @@ Creates a RDS Subnet Group
 
 ***
 
-{% include relevant_articles.md title=page.title category=page.category tag=page.tag %}
+{% include relevant_articles.markdown title=page.title category=page.category tag=page.tag %}

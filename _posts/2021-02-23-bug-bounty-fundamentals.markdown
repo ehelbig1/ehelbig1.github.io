@@ -24,4 +24,4 @@ they often offer swag or no reward at all.
 
 ***
 
-{% include relevant_articles.md title=page.title category=page.category tag=page.tag %}
+{% include relevant_articles.markdown title=page.title category=page.category tag=page.tag %}

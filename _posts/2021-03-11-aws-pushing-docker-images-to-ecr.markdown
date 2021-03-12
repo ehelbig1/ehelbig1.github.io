@@ -73,4 +73,4 @@ Note - the username for all AWS ECRs is <em>AWS</em>
 
 ***
 
-{% include relevant_articles.md title=page.title category=page.category tag=page.tag %}
+{% include relevant_articles.markdown title=page.title category=page.category tag=page.tag %}
