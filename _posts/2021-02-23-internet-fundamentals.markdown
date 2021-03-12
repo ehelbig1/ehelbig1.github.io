@@ -38,15 +38,4 @@ For example **127.0.0.1**.
 
 ***
 
-# Relevant Articles
-<ul style="list-style-type: none;">
-  {% for post in site.posts %}
-    {% if post.category == page.category and post.tag == page.tag and post.title != page.title %}
-      <li>
-        <a href="{{ post.url }}">
-          {{ post.title }}
-        </a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+{% include relevant_articles.md title=page.title category=page.category tag=page.tag %}
