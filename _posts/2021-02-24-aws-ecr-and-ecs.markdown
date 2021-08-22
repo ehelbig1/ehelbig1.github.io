@@ -40,17 +40,17 @@ aws ecr get-login-password --region <aws_region> | docker login --username AWS -
 
 Build your Docker image.
 ```sh
-docker build -t scc .
+docker build -t example .
 ```
 
 Re-tag your image to be in your newly created AWS ECR registry.
 ```sh
-docker tag scc:latest <aws_account_id>.dkr.ecr.<aws_region>.amazonaws.com/scc:latest
+docker tag example:latest <aws_account_id>.dkr.ecr.<aws_region>.amazonaws.com/example:latest
 ```
 
 Push the image to the repository.
 ```sh
-docker push 242179911962.dkr.ecr.us-east-1.amazonaws.com/scc:latest
+docker push 242179911962.dkr.ecr.us-east-1.amazonaws.com/example:latest
 ```
 
 
@@ -83,7 +83,7 @@ Task Role (Optional) - An IAM role that the task will use for making API request
 Network Mode - The Docker networking mode to use for the containers in this task. (Must be awsvpc if using Fargate)
 
 #### Task Execution IAM Role
-This role allow the task to pull container images and publish container logs to CloudWatch. A suitable role will automatically be created for you titled <em>ecsTaskExecutionRole</em> if using the AWS console.
+This role allows the task to pull container images and publish container logs to CloudWatch. A suitable role will automatically be created for you titled <em>ecsTaskExecutionRole</em> if using the AWS console.
 
 #### Task Size
 Specify a fixed size for you task. This is required if using Fargate. Container level memory settings are optional when this is set. Task size is not supported by Windows containers.
